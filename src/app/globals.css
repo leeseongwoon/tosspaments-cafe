@@ -898,8 +898,7 @@ a {
 @media screen and (max-width: 480px) {
   /* Toss Payments 모달 컨테이너 스타일 */
   #__tosspayments-container {
-    max-width: 90% !important;
-    transform: scale(0.9) !important;
+    max-width: 100% !important;
   }
   
   /* Toss Payments 모달 내부 요소 스타일 */
@@ -911,14 +910,6 @@ a {
   /* Toss Payments 모달 배경 스타일 */
   .__tosspayments-modal-backdrop {
     background-color: rgba(0, 0, 0, 0.7) !important;
-  }
-}
-
-/* 더 작은 화면에서 추가 축소 */
-@media screen and (max-width: 360px) {
-  #__tosspayments-container {
-    transform: scale(0.8) !important;
-    max-width: 85% !important;
   }
 }
 

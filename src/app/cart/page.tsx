@@ -103,7 +103,7 @@ export default function CartPage() {
   };
 
   return (
-    <PageLayout title="장바구니" activeTab="cart">
+    <PageLayout title="Shopping Basket" activeTab="cart">
       {cartItems.length > 0 ? (
         <>
           <div className="cart-items">

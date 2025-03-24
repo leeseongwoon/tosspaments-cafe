@@ -30,7 +30,7 @@ export default function MenuPage() {
       : menuItems.filter((item) => item.category === selectedCategory);
 
   return (
-    <PageLayout title="메뉴" activeTab="menu">
+    <PageLayout title="MENU" activeTab="menu">
       {/* 카테고리 필터 */}
       <div className="category-bar">
         <button

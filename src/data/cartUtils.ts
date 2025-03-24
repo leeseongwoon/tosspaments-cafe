@@ -56,4 +56,10 @@ export const removeItem = (itemId: string): CartItem[] => {
 // 총 주문 금액 계산
 export const calculateTotal = (cartItems: CartItem[]): number => {
   return cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+};
+
+// 장바구니 비우기
+export const clearCart = (): void => {
+  if (typeof window === 'undefined') return;
+  localStorage.removeItem('cartItems');
 }; 

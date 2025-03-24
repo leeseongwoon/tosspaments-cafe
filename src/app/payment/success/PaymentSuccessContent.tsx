@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
+import { clearCart } from '@/data/cartUtils';
 
 interface PaymentInfo {
   paymentKey: string;
@@ -25,6 +26,9 @@ export default function PaymentSuccessContent() {
         orderId,
         amount: parseInt(amount, 10).toLocaleString(),
       });
+      
+      // 결제 성공 시 장바구니 초기화
+      clearCart();
     }
   }, [searchParams]);
 

@@ -156,7 +156,7 @@ export const processPayment = async (cartItems: CartItem[], totalAmount: number)
     try {
       console.log('네트워크 연결 대기 중...');
       await waitForNetworkConnection();
-    } catch (_) {
+    } catch {
       throw new Error('네트워크 연결이 없습니다. 인터넷 연결을 확인해주세요.');
     }
   }
@@ -196,7 +196,7 @@ export const processPayment = async (cartItems: CartItem[], totalAmount: number)
         try {
           await new Promise(resolve => setTimeout(resolve, 2000)); // 2초 대기
           await waitForNetworkConnection(5000); // 네트워크 연결 대기
-        } catch (_) {
+        } catch {
           // 네트워크 연결 대기 실패시 마지막 시도면 오류 발생
           if (retryCount === MAX_RETRIES - 1) {
             throw new Error('네트워크 연결 오류가 발생했습니다. 인터넷 연결을 확인하고 다시 시도해주세요.');

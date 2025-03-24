@@ -54,7 +54,7 @@ export default function ScriptsLoader() {
       {/* 토스페이먼츠 SDK 로드 */}
       <Script
         src="https://js.tosspayments.com/v1"
-        strategy="beforeInteractive"
+        strategy="afterInteractive"
         onError={(e) => {
           console.error('토스페이먼츠 SDK 로드 실패:', e);
         }}

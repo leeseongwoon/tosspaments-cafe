@@ -137,7 +137,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <head>
-        <title>토스 카페</title>
+        <title>tosspaments cafe</title>
         <meta name="description" content="토스 카페 주문 앱" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta name="apple-mobile-web-app-capable" content="yes" />

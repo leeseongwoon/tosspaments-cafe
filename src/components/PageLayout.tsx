@@ -24,6 +24,27 @@ export default function PageLayout({ title, children, activeTab }: PageLayoutPro
     };
   }, []);
 
+  // 브라우저 창 타이틀 업데이트
+  useEffect(() => {
+    // 홈과 메뉴 페이지일 경우 페이지 이름 추가
+    let pageTitle = 'tosspaments cafe';
+    if (activeTab === 'home') {
+      pageTitle = 'tosspaments cafe - home';
+    } else if (activeTab === 'menu') {
+      pageTitle = 'tosspaments cafe - menu';
+    } else if (activeTab === 'cart') {
+      pageTitle = 'tosspaments cafe - cart';
+    } else if (title && title !== 'tosspaments cafe') {
+      pageTitle = `tosspaments cafe - ${title}`;
+    }
+    
+    document.title = pageTitle;
+    
+    return () => {
+      document.title = 'tosspaments cafe';
+    };
+  }, [title, activeTab]);
+
   return (
     <>
       <NavBar title={title}/>

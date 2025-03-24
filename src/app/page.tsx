@@ -5,7 +5,7 @@ import { featuredItems, promotions, infoItems } from '@/data/homeData';
 
 export default function Home() {
   return (
-    <PageLayout title="Tosspament Cafe" activeTab="home">
+    <PageLayout title="Tosspaments Cafe" activeTab="home">
       {/* 헤더 배너 */}
       <div className="home-banner">
         <div className="banner-content">

@@ -24,7 +24,8 @@ body {
   overflow-x: hidden;
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
   height: 100%;
@@ -38,7 +39,7 @@ body {
   min-height: 100vh;
   min-height: -webkit-fill-available;
   width: 100%;
-  
+
   /* 스크롤바 숨김 공통 속성 */
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE, Edge */
@@ -90,17 +91,22 @@ a {
 }
 
 @media screen and (min-width: 430px) {
-  .app-container, .nav-bar, .content, .tab-bar, .checkout-button-container {
+  .app-container,
+  .nav-bar,
+  .content,
+  .tab-bar,
+  .checkout-button-container {
     width: 100%;
     max-width: var(--app-max-width);
   }
-  
+
   .app-container {
     margin: 0 auto;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   }
-  
-  .tab-bar, .checkout-button-container {
+
+  .tab-bar,
+  .checkout-button-container {
     left: 50%;
     transform: translateX(-50%);
   }
@@ -216,7 +222,7 @@ a {
 
 .menu-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 16px;
   padding: 10px 0;
   width: 100%;
@@ -255,8 +261,18 @@ a {
 
 .menu-image {
   width: 100%;
-  height: 150px;
+  aspect-ratio: 10/7;
   object-fit: cover;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .menu-info {
@@ -264,7 +280,6 @@ a {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  height: 100%;
 }
 
 .menu-title {
@@ -283,7 +298,6 @@ a {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   flex: 1;
-  min-height: 40px;
 }
 
 .menu-price {
@@ -420,7 +434,8 @@ a {
   box-sizing: border-box;
 }
 
-.cart-item-left, .cart-item-right {
+.cart-item-left,
+.cart-item-right {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -615,7 +630,8 @@ a {
 }
 
 @media screen and (min-width: 430px) {
-  .checkout-button-container, .tab-bar {
+  .checkout-button-container,
+  .tab-bar {
     left: 50%;
     right: auto;
     transform: translateX(-50%);
@@ -868,7 +884,7 @@ a {
 }
 
 .toast-message i {
-  color: #4CD964;
+  color: #4cd964;
   font-size: 16px;
 }
 
@@ -878,13 +894,25 @@ a {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translate(-50%, 10px); }
-  to { opacity: 1; transform: translate(-50%, 0); }
+  from {
+    opacity: 0;
+    transform: translate(-50%, 10px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
 }
 
 @keyframes fadeOut {
-  from { opacity: 1; transform: translate(-50%, 0); }
-  to { opacity: 0; transform: translate(-50%, 10px); }
+  from {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, 10px);
+  }
 }
 
 @media screen and (min-width: 430px) {
@@ -900,13 +928,13 @@ a {
   #__tosspayments-container {
     max-width: 100% !important;
   }
-  
+
   /* Toss Payments 모달 내부 요소 스타일 */
   #__tosspayments-container iframe {
     max-width: 100% !important;
     width: 100% !important;
   }
-  
+
   /* Toss Payments 모달 배경 스타일 */
   .__tosspayments-modal-backdrop {
     background-color: rgba(0, 0, 0, 0.7) !important;

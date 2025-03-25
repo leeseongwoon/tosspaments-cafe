@@ -75,13 +75,15 @@ export default function MenuPage() {
             className="menu-item"
             onClick={() => handleAddToCart(item)}
           >
-            <Image
-              src={item.image}
-              alt={item.name}
-              className="menu-image"
-              width={200}
-              height={150}
-            />
+            <div className="menu-image">
+              <Image
+                src={item.image}
+                alt={item.name}
+                width={200}
+                height={120}
+                priority
+              />
+            </div>
             <div className="menu-info">
               <h3 className="menu-title">{item.name}</h3>
               <p className="menu-description">{item.description}</p>
